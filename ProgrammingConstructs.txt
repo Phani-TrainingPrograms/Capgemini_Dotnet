@@ -1,0 +1,179 @@
+What is Programming?
+A set of instructions that are provided to the computer in its language on what needs to be done on every action you do on it. 
+This could be a simple computing of numbers to get details like sum, avg, max and min and other details for its usage. Most of the time the program shall take inputs from the user, external sources or devices and compute(do some mathematical operations), store them for a certain predetermined time and later retrive the data with the same ease from where U have obtained. 
+
+What is the language of the computer?
+Binary language is the language of the computer. It is different from Human language as the values will be in the form of Os and 1s. 
+
+What is Computing language?
+A computing language is one that shall understand the human readable inputs, translate it into machine language and execute those instructions on that machine. 
+The conversion to the machine language is called as Building process. The execution of those instructions is called as RUNNING of the Program or EXEcuting the Program. 
+
+What are the computing languages currently popular in our Industry?
+Categericolly: 
+Single compilation programs: C, C++,
+Dual Compilations: C#, Java.
+Interpretor languages: JS, Python.
+Popular ones are based on the requirement of the program development and where the program is used.
+If its expected to work on only traditional devices: C, C++. 
+If its expected to work on multiple devices: C#, Java, 
+If its expected to work on most of the devices:
+Web Apps developed using JS, Python, R etc.   
+
+What is the process of building an Application?
+Once the Programming language is decided, then we shall use that language and create the software program. These human readable instructions are created with a certain grammer based on that language. There shall be a software called compiler that compiles the code into a building process. 
+The compiled files are built together, make a machine usable instruction code set called EXE. 
+The user of the Application can execute this EXE file(Generally one single file with an extension .exe) which flows in the pattern that U have defined in the computing language code. Each exe is a running process in the computer hardware. Each process shall have a private address space where the instructions and its data is available for it. One process cannot access the data of the other process. 
+If such sharing is required, then we use IPC(Inter Process Communication) where both the ends have to include a mechanism of accepting the requests and handling them and sending responses to those requests. There are various technologies that shall help in achieving this task: Pub-Sub Technoglogy, RPC(Remote Procedure calls), REST(Representational State Transfer) and many more. 
+
+What are the terms that are used in a programming language?
+1. File: Any code is developed on a file with a certain extension. 
+C/C++ uses .c/.cpp. 
+Java uses .java
+C# uses .cs. 
+Javascript uses .js. 
+2. Include the external dependencies for the code to work. These are libraries that are created for smoother development purposes. libraries can be set at the folder level(Project level).
+3. Most of the programming languages shall have an entry point. The location from where your program begins and ends. Within this block, U shall call other blocks of code or write the code here itself. 
+4. UR code shall contain statements, expressions, loops, functions, classes, objects at various levels and are used inside the main block either directy or indirectly. 
+5. Many a time, U should create multiple files to maintain the code for better readability and management. 
+6. All the files in the folder(Project) is compiled and built to create the EXE and deploy it for its usage at the production level. 
+
+How a team develops a program/software?
+Design: This is the time where the team works on the requirements, develop a Requirement Spec doc. The Requirements are understood from the Product Owner(The Guy who knows everything about the system which U R trying to Automate) and he shall approve the requirements. Any major change that is expected to have an impact on the flow of the Application shall eventually be considered as CR(Change request). In this phase, U shall decide on the technology, programming language, complexity in the features and appropriate deployment locations. U shall also decide on the features and its steps of execution where each feature is divided into use cases and tasks. U shall also mention about the NonFunctional Requirements. POCs are to be shared for the Use cases if it requires Tech research.     
+Implementation: 
+Based on the approved Software programming models the programming begins with developers, testers and devOps engineers for deployment purposes. 
+The Implementation shall follow the rules defined by the Tools that verifies the code standards expected by the Industry.Coding conventions, Naming conventions, Cyclomatic Complexity and many more such metrics. 
+Testing: Is done at various levels.It could be Test driven development(TDD), Automation Testing, Manual Testing, Blackbox testing and other kinds.
+Linting tools are used by the testers to test the code standards and testability of the code.  
+It is recommended to write the Unit tests before the development happens. 
+UNIT Tests are a set of functions that are created to test a unit of code. U shall test for success, failure, negative Inputs and positive Inputs.
+Tests are also done manually by the Customer End Users.
+In the final phase of the Sprint, the UAT process shall begin to perform an e2e testing. This is the time where the non functional requirements are tested and final reporting is done for the overall Application that U have developed. 
+/////////////////////////////////////
+How to write a program with a certain feature to be implemented?
+U design the function to be testable. 
+In the function U first write a Psuedocode for that functionality.
+It is a set of text statements that contains the steps of the execution of the code in a human readable manner to make it understandable to other members of the team before the actual coding is development. Pseudocode is more a simplified plain language way of writing code with its logic of a program without focusing on any specific sytanx of a programming language.
+
+KeyConcepts:
+What is PseudoCode?
+- Its a high level description of a program's logic. 
+- It uses plain language mixed with programming like structures(eg: If-then, for loop
+- It is not an exec code but serves as blueprint to the developers. 
+
+Why use the Pseudocode?
+- It is used at various levels by various groups in the Team.
+- To plan a program' structure and flow before the coding. 
+- To focus on the logic and problem solving without being carried away by syntax.
+- To make it easier for non programmers to understand the logic.
+
+How to write an efficient pseudocode?
+- Problem Defn: Clearly U should define the problem that needs to do. 
+- Algorithm Design: It is a break down of the problem into smaller steps using this code. 
+- Flow Design: Use flowcharts or step by step statements to map the program's control flow.
+- Coding: Once the logic is understood, U should convert the pseudocode to programming code. 
+- Testing: Validate the logic implemented in the program using unit testing feature. 
+  
+ Components of a pseudocode?
+ - Input/Output statements ->This can be both user inputs as well as system inputs.
+Eg: 
+	Input Age
+	Input userName
+	Output final_result
+	
+ - Conditional Statements -> Basically used for decision making within the code flow.
+If Age > 60 or Age < 18 Then
+	Output "Not eligible to open an account"
+else
+	Call InsertRecord(recDetails)
+	Output "Data stored in the DB successfully"
+ while creating loops:
+	Input Counter
+	while counter > 10 
+		Do counter += 1 
+	Loop
+ - Functions and Procedures -> Make the code as much modular as possible. If the logic is too big, U shall break into smaller functions and procedures and call them in the Code. 
+ - Functions return a value else it is called as Procedure. 
+ 
+Examples of pseudocode:
+Problem: Program to calculate the average of a given set of numbers. 
+Start:
+	Input SetofNumbers as Parameter.
+	let sum = 0
+	For each value in SetOfNumbers
+		sum += value
+	avgValue = sum / countOfNumbers
+	return avgValue
+End
+
+Binary Search(Divide and Conquer Algorithm)
+Problem: Find the index of a target value in a sorted array.
+Start	
+	Input sorted_array, target_value
+	Set low = sorted_array[0]
+	Set high = sorted_array[sorted_array.Length - 1];
+	While low <= high Do
+		mid = (low + high) /2
+		If sorted_array[mid] == target_value Then
+			return mid
+			End
+		Else if sorted_array[mid] < target_value Then
+			Set low = mid + 1
+		Else
+			Set high = mid - 1
+		End if	
+	End While
+	Throw Exception "Target not found"
+	
+//Merge Sort(Recursive Sorting Algorithm)
+Problem: Sort an Array using the Divide and Conquer approach
+Start
+	Function Merge(left, right)
+	 Create an empty_array
+	 While left and right are not empty
+	 Do
+	   If left[0] <= right[0] then 
+	   Append left[0] to empty_array
+	   Remove right[0]
+	   End If
+	   End While
+	End Function
+	
+	Function MergeSort(array)
+	  If array.Length <= 1
+		Return array
+	  End If
+	  
+	  mid = array.Length / 2
+	left_half = MergeSort(array[0 to mid]	  
+	right_half = MergeSort(array[mid to end]
+	Return Merge(left_half, right_half)
+	End Function
+	
+	Append remaining elements of left or right to empty_array
+	return empty_array
+End	
+
+How to MergeSort works:
+1. Divide: The array shall be divided into smaller subarrays repeatedly until each subarray has only one element. 
+2. Conquer: Recursively sort each of these smaller array.	
+3. Combine: Merge the sorted subarrays into a large Sorted Array. 
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+  
+
+
+
+
+
