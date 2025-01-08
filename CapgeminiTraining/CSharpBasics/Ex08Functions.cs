@@ -1,8 +1,8 @@
 ﻿/*
- * Functions are blocks of code that are creaeted for reusability and modularity.
+ * Functions are blocks of code that are created for reusability and modularity.
  * They are defined within the class or struct can be invoked to reuse the code and simplify the maintenance.
  * 
- * Functions have access specifiers to allow various restriction leves while accessing them:
+ * Functions have access specifiers to allow various restriction levels while accessing them:
  * private: Only within the class it is declared.
  * public: Across the Application and solution. 
  * protected : Within the Class and its derived classes. 
@@ -27,6 +27,12 @@ namespace CSharpBasics
     {
         const string TITLE = "Math Calc Program";
 
+
+        /// <summary>
+        /// Function to get string input from the user after asking a Question
+        /// </summary>
+        /// <param name="question">The Question to print</param>
+        /// <returns>A string input given by the User.</returns>
         static string GetString(string question)
         {
             Console.WriteLine(question);
@@ -39,7 +45,12 @@ namespace CSharpBasics
         }
         static void Main(string[] args)
         {
-            bool processing = false;
+            //CalcProgram();
+            DefaultFunction();
+        }
+
+        private static void CalcProgram()
+        {
             Console.Title = TITLE;
             do
             {
@@ -67,5 +78,13 @@ namespace CSharpBasics
 
             return result;
         }
+
+        //ToDo: Check if the default parameters can be added anywhere in the function parameter list?
+        static void DefaultFunction(string question = "How are U doing today")
+        {
+            var answer = GetString(question);
+            Console.WriteLine($"The answer given is {answer}");
+        }
+        
     }
 }
