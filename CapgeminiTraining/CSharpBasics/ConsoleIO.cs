@@ -9,7 +9,7 @@ namespace CSharpBasics
         /// </summary>
         /// <param name="question">The Question to print</param>
         /// <returns>A string input given by the User.</returns>
-        static string GetString(string question)
+        public static string GetString(string question)
         {
             Console.WriteLine(question);
             return Console.ReadLine();
