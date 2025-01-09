@@ -28,21 +28,7 @@ namespace CSharpBasics
         const string TITLE = "Math Calc Program";
 
 
-        /// <summary>
-        /// Function to get string input from the user after asking a Question
-        /// </summary>
-        /// <param name="question">The Question to print</param>
-        /// <returns>A string input given by the User.</returns>
-        static string GetString(string question)
-        {
-            Console.WriteLine(question);
-            return Console.ReadLine();  
-        }
-        static int GetValue(string question)
-        {
-            string answer = GetString(question);
-            return Convert.ToInt32(answer);
-        }
+       
         static void Main(string[] args)
         {
             //CalcProgram();
