@@ -21,6 +21,11 @@ namespace CSharpBasics
             return EmpId.GetHashCode();//returns the value
         }
 
+        //All objects will display their data using ToString
+        public override string ToString()
+        {
+            return $"{EmpName}, {Salary:C}";
+        }
         public override bool Equals(object obj)
         {
             if(obj == null) return false;

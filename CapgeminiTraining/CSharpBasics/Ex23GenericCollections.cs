@@ -9,14 +9,31 @@ using System.Linq;
  */
 namespace CSharpBasics
 {
+    
     internal class Ex23GenericCollections
     {
         static void Main(string[] args)
         {
             //ListExample();
             //HashSetExample();
-            HashSetOnEmployees();
+            //HashSetOnEmployees();
+            DictionaryExample();
+           
         }
+
+        private static void DictionaryExample()
+        {
+          Dictionary<int, Employee> empList = new Dictionary<int, Employee>();
+            empList[1] = new Employee { EmpId = 1, EmpName = "Phaniraj", Salary = 50000 };
+            empList[2] = new Employee { EmpId = 2, EmpName = "Phaniraj", Salary = 51000 };
+            empList[3] = new Employee { EmpId = 3, EmpName = "Phaniraj", Salary = 50000 };
+            empList[4] = new Employee { EmpId = 4, EmpName = "Phaniraj", Salary = 50000 };
+            foreach (var pair in empList)
+            {
+                Console.WriteLine($"Key:{pair.Key}, Value: {pair.Value}");
+            }
+        }
+
 
         private static void HashSetOnEmployees()
         {
