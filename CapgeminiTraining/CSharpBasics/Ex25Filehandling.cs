@@ -26,10 +26,30 @@ namespace CSharpBasics
             //writingToFile();            
             //readingFromFile();
             //writeCsvFile(new Employee { EmpId = 123, EmpName = "Phaniraj", EmpAddress = "Bangalore", EmpSalary = 56000 });
-            var data = readCsvFile();
-            foreach (var emp in data)
+            //var data = readCsvFile();
+            //foreach (var emp in data)
+            //{
+            //    Console.WriteLine(emp.EmpName);
+            //}
+            directoryReadingExample();
+
+        }
+
+        private static void directoryReadingExample()
+        {
+            var dirPath = @"C:\Trainings\Capgemini-Dec24\CapgeminiTraining\CSharpBasics";
+            if (!Directory.Exists(dirPath))
             {
-                Console.WriteLine(emp.EmpName);
+                Console.WriteLine("No Directory found");
+            }
+            else
+            {
+                var data = Directory.GetFiles(dirPath);
+                foreach (var file in data)
+                {
+                    var fileInfo = new FileInfo(file);
+                    Console.WriteLine("The File {2} was created on {0} and has extension {1}", fileInfo.CreationTime, fileInfo.Extension, fileInfo.Name);
+                }
             }
         }
 
