@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace CSharpBasics
 {
@@ -12,6 +13,7 @@ namespace CSharpBasics
     }
     class GenericClass
     {
+        
         static void Main(string[] args)
         {
             Repo<string> stringRepo = new Repo<string>();
