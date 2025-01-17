@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CSharpBasics
 {
@@ -20,10 +22,19 @@ namespace CSharpBasics
         /// </summary>
         /// <param name="question">The Question to print</param>
         /// <returns>A Valid integer.</returns>
-        static int GetValue(string question)
+        public static int GetValue(string question)
         {
             string answer = GetString(question);
             return Convert.ToInt32(answer);
+        }
+
+        public static async Task LoopThru(int times, string message)
+        {
+            for (int i = 0; i < times; i++)
+            {
+                await Task.Delay(1000);
+                Console.WriteLine(message);
+            }
         }
     }
 }
