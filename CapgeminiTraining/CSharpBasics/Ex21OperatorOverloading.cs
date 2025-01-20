@@ -8,7 +8,7 @@
  * Make a list of the operators that can be overloaded and the ones that cannot be overloaded. 
  * By using operator overloading, you can make your classes more expressive and easier to use.
  */
-namespace CSharpBasics
+namespace CSharpBasics.Collections
 {
     class Employee
     {

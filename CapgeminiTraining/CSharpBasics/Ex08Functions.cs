@@ -28,7 +28,6 @@ namespace CSharpBasics
         const string TITLE = "Math Calc Program";
 
 
-       
         static void Main(string[] args)
         {
             //CalcProgram();
@@ -41,12 +40,12 @@ namespace CSharpBasics
             do
             {
                 Console.Clear();
-                int firstVal = GetValue("Enter the First value: ");
-                int secondVal = GetValue("Enter the Second value: ");
-                string choice = GetString("Enter the choice as +, - or * or /");
+                int firstVal = ConsoleIO.GetValue("Enter the First value: ");
+                int secondVal = ConsoleIO.GetValue("Enter the Second value: ");
+                string choice = ConsoleIO.GetString("Enter the choice as +, - or * or /");
                 double result = ProcessChoice(firstVal, secondVal, choice);
                 Console.WriteLine("The Result of this Operation is " + result);
-            } while (GetString("Press Y to continue").ToUpper() == "Y");
+            } while (ConsoleIO.GetString("Press Y to continue").ToUpper() == "Y");
         }
 
         private static double ProcessChoice(int firstVal, int secondVal, string choice)
@@ -68,7 +67,7 @@ namespace CSharpBasics
         //ToDo: Check if the default parameters can be added anywhere in the function parameter list?
         static void DefaultFunction(string question = "How are U doing today")
         {
-            var answer = GetString(question);
+            var answer = ConsoleIO.GetString(question);
             Console.WriteLine($"The answer given is {answer}");
         }
         

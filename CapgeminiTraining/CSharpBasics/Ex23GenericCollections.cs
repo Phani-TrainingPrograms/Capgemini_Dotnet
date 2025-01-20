@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using CSharpBasics.Collections;
 using System.Linq;
 /*
  * Introduced in C# 2.0(2005), it is type safe collections. U should always go for Generic Collections as no BOXING/UNBOXING is involved and it is type safe(U cannot have data of multiple data types into a collection).
@@ -23,11 +24,13 @@ namespace CSharpBasics
 
         private static void DictionaryExample()
         {
-          Dictionary<int, Employee> empList = new Dictionary<int, Employee>();
-            empList[1] = new Employee { EmpId = 1, EmpName = "Phaniraj", Salary = 50000 };
-            empList[2] = new Employee { EmpId = 2, EmpName = "Phaniraj", Salary = 51000 };
-            empList[3] = new Employee { EmpId = 3, EmpName = "Phaniraj", Salary = 50000 };
-            empList[4] = new Employee { EmpId = 4, EmpName = "Phaniraj", Salary = 50000 };
+          Dictionary<int, Collections.Employee> empList = new Dictionary<int, Collections.Employee>();
+            empList[1] = new Collections.Employee { EmpId = 1, EmpName = "Phaniraj", Salary = 50000 };
+            empList[2] = new Collections.Employee { EmpId = 2, EmpName = "Phaniraj", Salary = 51000 };
+            empList[3] = new Collections.Employee { EmpId = 3, EmpName = "Phaniraj", Salary = 50000 };
+            empList[4] = new Collections.Employee { EmpId = 4, EmpName = "Phaniraj", Salary = 50000 };
+            empList.Add(5, new Collections.Employee { EmpId = 5, EmpName = "Kumar", Salary = 45000 });
+
             foreach (var pair in empList)
             {
                 Console.WriteLine($"Key:{pair.Key}, Value: {pair.Value}");
@@ -37,10 +40,10 @@ namespace CSharpBasics
 
         private static void HashSetOnEmployees()
         {
-            HashSet<Employee> employees = new HashSet<Employee>();
-            employees.Add(new Employee { EmpId = 123, EmpName = "Phaniraj", Salary = 56000 });
-            employees.Add(new Employee { EmpId = 123, EmpName = "Phaniraj", Salary = 56000 });
-            foreach (Employee e in employees)
+            HashSet<Collections.Employee> employees = new HashSet<Collections.Employee>();
+            employees.Add(new Collections.Employee { EmpId = 123, EmpName = "Phaniraj", Salary = 56000 });
+            employees.Add(new Collections.Employee { EmpId = 123, EmpName = "Phaniraj", Salary = 56000 });
+            foreach (Collections.Employee e in employees)
             {
                 Console.WriteLine($"Name: {e.EmpName}, Hashvalue: {e.GetHashCode()}");
             }

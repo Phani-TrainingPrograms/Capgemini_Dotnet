@@ -10,7 +10,7 @@ using System.IO;
  * DirectoryInfo to create and work with directories of the File System
  */
 
-namespace CSharpBasics
+namespace CSharpBasics.FileHandling
 {
     class Employee
     {

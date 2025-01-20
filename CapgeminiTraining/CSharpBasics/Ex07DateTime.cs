@@ -17,7 +17,9 @@ namespace CSharpBasics
             //CreatingDateTime();
             //FormatingDateTime();
             //TakingInputAsDate();
-            CalculationsExample();
+            //CalculationsExample();
+            var date = DateTime.Now;
+            Console.WriteLine($"The Curernt date is : {date.Day}/{date.Month}/{date.Year}");
         }
 
         private static void CalculationsExample()

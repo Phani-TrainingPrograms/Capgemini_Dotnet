@@ -31,18 +31,18 @@ namespace CSharpBasics
         static async Task LongRunningOperationAsync()
         {
             Console.WriteLine("The Task has started");
-            ConsoleIO.LoopThru(10, "Task message");
+            await ConsoleIO.LoopThru(10, "Task message");
             Console.WriteLine("Task has completed");
             await Task.Delay(2000);
         }
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             //threadingExample();
             //taskExample();
             Console.WriteLine("Main has started");
             Task t1 = LongRunningOperationAsync();
-            ConsoleIO.LoopThru(5, "Main doing its job");
-            //await t1;
+            //await ConsoleIO.LoopThru(5, "Main doing its job");
+            t1.Wait();
             Console.WriteLine("The Main is terminating");
         }
 
