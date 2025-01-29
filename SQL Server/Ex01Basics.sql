@@ -25,6 +25,8 @@ insert into DeptTable values('Training')
 insert into DeptTable values('Development')
 insert into DeptTable values('Sales')
 insert into DeptTable values('Admin')
+insert into DeptTable values('HouseKeeping')
+insert into DeptTable values('Transport')
 
 Select * from DeptTable
 --Adding a new column to the Existing table which shall reference another table. It means that the data for this column should be any of the values from the referenced column.
@@ -46,9 +48,14 @@ insert into EmpTable values(5, 'Banu Prakash', 'Bangalore', 45000, 1)
 insert into EmpTable (EmpId, EmpName, EmpAddress, EmpSalary) values(7, 'Surender', 'Hyderabad', 50000)
 Drop table DeptTable
 Alter table EmpTable
-Add constraint FK_EmpTable_DeptId
+Add constraint FK_EmpTable_DeptId FOREIGN KEY (DeptId) REFERENCES DeptTable(DeptId) --Add a constraint without creating new column
+
 alter table Emptable drop column deptId --drop the column
 
 truncate table EmpTable --deletes all the records of the table. 
 --Commands for DDL : Create, Drop, Alter, Truncate. 
 Select * from EmpTable
+
+Alter table Emptable
+Add DeptId int Constraint FK_EmpTable_DeptTable FOREIGN KEY REFERENCES DeptTable(DeptId)
+
