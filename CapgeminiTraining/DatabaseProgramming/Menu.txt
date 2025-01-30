@@ -1,0 +1,6 @@
+﻿~~~~~~~~~~~~~~~~~Dept manager software~~~~~~~~~~~~~~~
+TO ADD NEW DEPT-------->PRESS 1
+TO UPDATE DEPT--------->PRESS 2
+TO DISPLAY ALL DEPTS--->PRESS 3
+PS: ANY OTHER KEY PRESSED IS CONSIDERED AS EXIT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
