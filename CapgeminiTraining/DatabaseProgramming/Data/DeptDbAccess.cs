@@ -10,6 +10,59 @@ namespace DatabaseProgramming.Data
         public string DeptName { get; set; }
     }
 
+    class Employee
+    {
+        public int EmpId { get; set; }
+        public string EmpName { get; set; }
+        public string EmpAddress { get; set; }
+        public int EmpSalary { get; set; }
+        public int DeptId { get; set; }
+    }
+
+    interface IEmployeeDbAccess
+    {
+        List<Employee> GetAll();
+    }
+
+    class EmployeeDbAccess : IEmployeeDbAccess
+    {
+        #region Members
+        SqlConnection sqlCon;
+        SqlCommand cmd;
+        #endregion
+
+        #region Constants
+        const string STRCONNECTION = "Data Source=PHANI-PC\\SQLEXPRESS;Initial Catalog=CapgeminiDb;Integrated Security=True;Encrypt=False";
+        const string SELECTSTATEMENT = "SELECT * FROM EMPTABLE";
+        #endregion
+        public List<Employee> GetAll()
+        {
+            List<Employee> empList = new List<Employee>();
+            using(sqlCon = new SqlConnection(STRCONNECTION))
+            {
+                cmd = new SqlCommand(SELECTSTATEMENT, sqlCon);
+                sqlCon.Open();
+                var reader = cmd.ExecuteReader();
+                while(reader.Read())
+                {
+                    var emp = new Employee();
+                    emp.EmpId =Convert.ToInt32(reader[0]);
+                    emp.EmpName = reader[1].ToString();
+                    emp.EmpAddress = reader[2].ToString();
+                    emp.EmpSalary = Convert.ToInt32(reader[3]);
+                    int deptId;
+                    if(int.TryParse(reader[4].ToString(), out deptId))
+                    emp.DeptId = deptId;
+                    else 
+                        emp.DeptId = 0;
+                    empList.Add(emp);
+                }
+                sqlCon.Close();
+            }
+            return empList;
+        }
+    }
+
     interface IDeptDbAccess
     {
         void AddDept(Dept dept);

@@ -1,0 +1,7 @@
+C:\Trainings\Capgemini-Dec24\CapgeminiTraining\DatabaseProgramming\bin\Debug\DatabaseProgramming.exe.config
+C:\Trainings\Capgemini-Dec24\CapgeminiTraining\DatabaseProgramming\bin\Debug\DatabaseProgramming.exe
+C:\Trainings\Capgemini-Dec24\CapgeminiTraining\DatabaseProgramming\bin\Debug\DatabaseProgramming.pdb
+C:\Trainings\Capgemini-Dec24\CapgeminiTraining\DatabaseProgramming\obj\Debug\DatabaseProgramming.csproj.AssemblyReference.cache
+C:\Trainings\Capgemini-Dec24\CapgeminiTraining\DatabaseProgramming\obj\Debug\DatabaseProgramming.csproj.CoreCompileInputs.cache
+C:\Trainings\Capgemini-Dec24\CapgeminiTraining\DatabaseProgramming\obj\Debug\DatabaseProgramming.exe
+C:\Trainings\Capgemini-Dec24\CapgeminiTraining\DatabaseProgramming\obj\Debug\DatabaseProgramming.pdb

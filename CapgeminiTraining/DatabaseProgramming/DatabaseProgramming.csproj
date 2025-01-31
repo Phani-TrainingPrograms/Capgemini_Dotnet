@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DatabaseProgramming.UIComponent</StartupObject>
+    <StartupObject>DatabaseProgramming.LinqExamples.LinqDemo</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,16 +47,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\DeptDbAccess.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="LinqExamples\LinqDemo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UIComponent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Menu.txt" />
-    <Content Include="Task.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
