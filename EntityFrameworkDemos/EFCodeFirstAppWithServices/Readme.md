@@ -12,11 +12,12 @@ Add the following Nuget Packages:
 - Microsoft.EntityFrameworkCore.Tools
 
 ### Create a new folder called Entities and create UR Entity classes there. 
-Create a new folder  called Data and write UR DbContext class in it. 
-Build the Application. 
-Run the following commands in the Package manager Command Window:
-add-migration mig1
-update-database ->Shall generate the required tables in the backend.
+- Create a new folder  called Data and write UR DbContext class in it. 
+- Build the Application. 
+- Run the following commands in the Package manager Command Window:
+- add-migration mig1
+- update-database ->Shall generate the required tables in the backend.
 
 ### Create a new folder called Repos->Repository Layer. 
-Create an IBookRepository, IAuthorRepository interfaces and its implementor classes. 
+- Create an IBookRepository, IAuthorRepository interfaces and its implementor classes. 
+- Implement the Classes for the CRUD operations required. 
