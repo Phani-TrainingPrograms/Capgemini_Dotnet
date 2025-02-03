@@ -20,4 +20,9 @@ Add the following Nuget Packages:
 
 ### Create a new folder called Repos->Repository Layer. 
 - Create an IBookRepository, IAuthorRepository interfaces and its implementor classes. 
-- Implement the Classes for the CRUD operations required. 
+- Implement the Classes for the CRUD operations required.
+
+### Create a new folder called Services
+- Create a new Class called BookAuthorService which contains the functions that abstract the EF Code for the Console Application.
+- Service classes are consumed by the UI Applications without bothering about the source of the data.
+- Service Class has the same functions as the Repository Class and it simply contains the Interface Component and calls the functions after appropriately applying the Business logic.
