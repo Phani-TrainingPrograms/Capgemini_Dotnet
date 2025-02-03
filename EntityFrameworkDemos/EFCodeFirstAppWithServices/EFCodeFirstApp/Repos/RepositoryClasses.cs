@@ -1,4 +1,4 @@
-﻿using EFCodeFirstApp.Data;
+using EFCodeFirstApp.Data;
 using EFCodeFirstApp.Entities;
 
 namespace EFCodeFirstApp.Repositories
@@ -28,17 +28,36 @@ namespace EFCodeFirstApp.Repositories
 
         public void DeleteBook(int id)
         {
-            throw new NotImplementedException();
+            var book = _context.Books.FirstOrDefault((b) =>b.BookId == id);
+            if(book != null)
+            {
+                _context.Books.Remove(book);
+                _context.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("Book not found to delete");
+            }
         }
 
         public List<Book> GetAllBooks()
         {
-            throw new NotImplementedException();
+            return _context.Books.ToList();
         }
 
         public void UpdateBook(Book book)
         {
-            throw new NotImplementedException();
+            var found = _context.Books.FirstOrDefault((b) => b.BookId == book.BookId);
+            if(found != null)
+            {
+                found.Title = book.Title;
+                found.Price = book.Price;   
+                _context.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("Book not found to update");
+            }
         }
     }
 }
