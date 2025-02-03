@@ -1,5 +1,6 @@
-using EFCodeFirstApp.Data;
+﻿using EFCodeFirstApp.Data;
 using EFCodeFirstApp.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace EFCodeFirstApp.Repositories
 {
@@ -42,7 +43,10 @@ namespace EFCodeFirstApp.Repositories
 
         public List<Book> GetAllBooks()
         {
-            return _context.Books.ToList();
+            return _context.Books
+                        .Include(b => b.BookAuthors)
+                        .ThenInclude(ba => ba.Author)
+                        .ToList();
         }
 
         public void UpdateBook(Book book)
