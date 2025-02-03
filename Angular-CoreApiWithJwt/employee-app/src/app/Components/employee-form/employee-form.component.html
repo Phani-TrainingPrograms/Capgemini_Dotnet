@@ -1,0 +1,52 @@
+<div class="form-container">
+    <h2>{{ isEditMode ? 'Edit' : 'Add' }} Employee</h2>
+
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" type="text" formControlName="name">
+        <div class="error" *ngIf="employeeForm.get('name')?.errors?.['required'] && employeeForm.get('name')?.touched">
+          Name is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="department">Department</label>
+        <input id="department" type="text" formControlName="department">
+        <div class="error" *ngIf="employeeForm.get('department')?.errors?.['required'] && employeeForm.get('department')?.touched">
+          Department is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="position">Position</label>
+        <input id="position" type="text" formControlName="position">
+        <div class="error" *ngIf="employeeForm.get('position')?.errors?.['required'] && employeeForm.get('position')?.touched">
+          Position is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="salary">Salary</label>
+        <input id="salary" type="number" formControlName="salary">
+        <div class="error" *ngIf="employeeForm.get('salary')?.errors?.['required'] && employeeForm.get('salary')?.touched">
+          Salary is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="joinDate">Join Date</label>
+        <input id="joinDate" type="date" formControlName="joinDate">
+        <div class="error" *ngIf="employeeForm.get('joinDate')?.errors?.['required'] && employeeForm.get('joinDate')?.touched">
+          Join Date is required
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" [disabled]="employeeForm.invalid || isSubmitting">
+          {{ isSubmitting ? 'Saving...' : 'Save' }}
+        </button>
+        <button type="button" (click)="cancel()">Cancel</button>
+      </div>
+    </form>
+  </div>

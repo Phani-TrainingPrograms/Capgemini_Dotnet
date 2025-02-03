@@ -1,0 +1,42 @@
+<div class="employee-list-container">
+    <div class="header">
+      <h2>Employees</h2>
+      <button *ngIf="isAdmin" routerLink="/employees/create">
+        Add Employee
+      </button>
+    </div>
+
+    <div class="search-box">
+      <input 
+        type="text" 
+        [(ngModel)]="searchTerm" 
+        (input)="onSearch()"
+        placeholder="Search employees...">
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Position</th>
+          <th>Salary</th>
+          <th>Join Date</th>
+          <th *ngIf="isAdmin">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of filteredEmployees">
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.department }}</td>
+          <td>{{ employee.position }}</td>
+          <td>{{ employee.salary | currency }}</td>
+          <td>{{ employee.joinDate | date }}</td>
+          <td *ngIf="isAdmin">
+            <button (click)="editEmployee(employee)">Edit</button>
+            <button (click)="deleteEmployee(employee)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
