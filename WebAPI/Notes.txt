@@ -1,0 +1,35 @@
+ASP.NET Web API
+If I want a set of functions to be consumed from different platforms and languages, then we can go for REST API.
+REST stands for Representational State Transfer. 
+It implies that the data can be transfered in the form of JSON/XML using HTTP. 
+HTTP has 5 verbs: 
+GET-> Extracting the data from the services
+POST->Send the Data in a hidden format to the service, 
+PUT->Send the data to update the data in the service.
+DELETE->Remove the data from the Service
+PATCH->Perform partial updates in the service. 
+ 
+How is it different from DLL?
+DLLs are available only on Windows Apps. DLLs are inproc components. Where as Web API is a part of Web services. 
+
+Other technologies similar to Web API"
+SpringBoot ->Java
+Express ->Nodejs
+CodeIgniter ->PHP
+and many more for different technologies. 
+
+.NET Web API can be developed on both .NET Framework and .NET CORE.
+Our example is on .NET CORE.
+
+The Major features of Web API:
+1. Built in .NET CORE to create RESTFul Services.
+2. Light weight and faster compared to WCF(Older SOA of .NET)
+3. DI feature of .NET CORE.
+4. Good support of new libraries that can be taken from Nuget. 
+
+
+
+
+
+
+ 
