@@ -31,7 +31,10 @@ namespace WebApiCode.Controllers
 
         [HttpPost]
         public ActionResult<Trainee> AddNewTrainee([FromBody]Trainee newTrainee)
+                {if(!ModelState.IsValid)
         {
+            return BadRequest(ModelState);
+        }
             this._context.Trainees.Add(newTrainee);
             this._context.SaveChanges();
             var rec = this._context.Trainees.OrderBy(t =>t.TraineeId).LastOrDefault();
