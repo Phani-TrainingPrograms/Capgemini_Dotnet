@@ -13,14 +13,14 @@
 
 3. Create a SortedDictionary<string, double> for storing City Temperatures
 	- Add 5 Cities with their temperatures
-	- Display all the key-value pairs in the lsit
+	- Display all the key-value pairs in the list
 	- Find the City with highest temperature and lowest temperature.
 
 4. Create an Application that stores only unique Customers and perform CRUD operations on it. Tip: Use HashSet<Customer>
 
 5. Create a Generic method called Swap that swaps two values. 
 
-6. Create a Generic class called Repo<T> that allows to perform CRUD operations
+6. Create a Generic class called Repo&lt;T&gt; that allows to perform CRUD operations
 Apply it on Customer and Employee and test the results. 
 
-7. Create a generic Class called Database<T> that allows T to be of reference types only. Implement CRUD operations and Test it on int, Employee and string.
+7. Create a generic Class called Database&lt;T&gt; that allows T to be of reference types only. Implement CRUD operations and Test it on datatypes int, Employee and string.
