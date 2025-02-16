@@ -44,7 +44,6 @@ namespace MeditationDemo
                     var temp = mem as MeditationCenter;
                     if(temp?.MemberId == memId)
                     {
-                        var weighLoss = 0.0;
                         if(temp.BMI >= 25 && temp.BMI < 30)
                             fee = 2000;
                         else if(temp.BMI >= 30 && temp.BMI < 35)
