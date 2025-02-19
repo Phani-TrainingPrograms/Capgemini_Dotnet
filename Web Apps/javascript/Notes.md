@@ -24,7 +24,14 @@
 3. U can use typeof function to determine the internal type that the variable holds. 
 4.  internally variables could be: number, string, object, boolean, undefined.
 5. To convert inputs to numbers we use parseInt and parseFloat. 
-6. If the conversion is not possible, then it shall be assigned as NaN(Not a Number). However we can use IsNumber or Number functions to check of the input is a valid number and then we can handle it. 
+6. If the conversion is not possible, then it shall be assigned as NaN(Not a Number). However we can use IsNumber or Number functions to check of the input is a valid number and then we can handle it.
+
+### Loops in JS
+1. for loop used when U have a known number of iterations
+2. for..in loop used when U have to access the properties of an object as keys.
+3. for..of loop works like foreach of C# where we can use it to iterate thru' arrays, strings and other collections.
+4. Array.forEach is used to work like foreach with a callback function that shall be called on all the elements of the collection.
+5. while and do...while work similarly like in other programming languages.
 
 ### Arrays in JS
 1. Arrays in JS work like collections of other programming languages. 
