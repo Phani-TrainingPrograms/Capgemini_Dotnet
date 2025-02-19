@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to Web App Development</h1>
+    <nav>
+        <a href="Ex01Basics.html">Home</a>
+        <a href="Ex02Formatting.html">Formatting</a>
+        <a href="Ex03Lists.html">Lists</a>
+        <a href="Ex04Tables.html">Tables</a>
+        <a href="Ex05Images.html">Images</a>
+        <a href="">Forms</a>
+        <a href="">GeoLocation</a>
+        <a href="">About Us</a>
+    </nav>
+    <hr>
+    <h2>Tables</h2>
+    <p>
+        Tables are used to present the content in a tabular format. It could be the data extracted from a REST API getting its data from a Database. 
+        Most of the time, the data shall be dynamic and shall populate the data dynamically(At the runtime). 
+    </p>
+    <p>
+        <h2>Points to Remember:</h2>
+        <ul>
+            <li>The Table tag is used to create the table &lt;table&gt;</li>
+            <li>It shall have 2 important Tags: tr and td which represents row of the table and the data in that column of the row respectively</li>
+            <li>Optionally U can use th tag for creating headings to the table. </li>
+            <li>Use the border attribute to set the border to the table. Alternatively, you can use the styles to achieve the same.</li>
+            <li>U can also use optional tags like tfoot to present footer for the table</li>
+            <li>tr and td have span(col and row) feature which allows the respective tags to span across the rows and columns. </li>
+        </ul>
+    </p>
+    <section>
+        <h2>Example.</h2>
+        <table border="1" width="100%">
+            <thead>
+                <tr>
+                    <th colspan="4">list of Employees with Us!!!</th>
+                </tr>
+                <tr>
+                    <th>EmployeeId</th>
+                    <th>Employee Name</th>
+                    <th>Employee Address</th>
+                    <th>Employee Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td>Phaniraj</td>
+                    <td>Bangalore</td>
+                    <td>45000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Vinod Kumar</td>
+                    <td>Shimoga</td>
+                    <td>55000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Pramod CS.</td>
+                    <td>Tumkur</td>
+                    <td>40000</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Mahesh KS</td>
+                    <td>Bangalore</td>
+                    <td>35000</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Rita Wilson</td>
+                    <td>Panaji</td>
+                    <td>40000</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        End of the list of Employees
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+</body>
+</html>

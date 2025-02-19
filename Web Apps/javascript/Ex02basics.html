@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS basics</title>
+    <script>
+        function uibasedFunctions(){        
+            alert("Apple 123")
+            const response = prompt("Do U like Apples")
+            alert(response)
+    
+            const res = confirm("Do U like JS?")
+            if(res)
+                alert("Welcome to JS training")
+            else
+            alert("Learn python atleast");
+        }
+
+        function datatypesDemo(){
+            let varName = 123;//test for number, double, string, bool, undefined. object. 
+            let data = ["Apples", "Mangoes", "Oranges"]
+            alert(typeof(data));
+        }
+        function onProcess(){
+            //take the values from those inputs.
+            
+            const first = parseFloat(document.getElementById("firstNum").value) 
+            const second = parseFloat(document.getElementById("secondNum").value) 
+            const option = document.getElementById("operand").value 
+            //switch statement to perform the arithematic operation based on the selected option. 
+            let result = 0.0;
+            switch(option){
+                case "Add" : result = first + second; break;
+                case "Subtract" : result = first - second; break;
+                case "Multiply" : result = first * second; break;
+                case "Divide" : result = first / second; break;
+            }
+            //set the span with the result
+            const sp = document.getElementById("display");
+            sp.innerText = result;
+        }
+        
+    </script>
+</head>
+<body>
+   <h2>Calc Program</h2>
+   <input type="number" id="firstNum" placeholder="First Value"/>
+   <select id="operand">
+        <option>Add</option>
+        <option>Subtract</option>
+        <option>Multiply</option>
+        <option>Divide</option>
+   </select>
+   <input type="number" id="secondNum" placeholder="Second Value"/>
+   <button onclick="onProcess()">=</button>
+   <span id="display"></span>
+</body>
+</html>

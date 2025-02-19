@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function callSubmit() {
+            const info = {};
+            info.name = document.getElementById("txtName").value;
+            info.email = document.getElementById("txtEmail").value;
+            info.phone = document.getElementById("txtMobile").value;
+            alert(info)
+            console.log(info)
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Welcome to Web App Development</h1>
+    <nav>
+        <a href="Ex01Basics.html">Home</a>
+        <a href="Ex02Formatting.html">Formatting</a>
+        <a href="Ex03Lists.html">Lists</a>
+        <a href="Ex04Tables.html">Tables</a>
+        <a href="Ex05Images.html">Images</a>
+        <a href="Ex06Forms.html">Forms</a>
+        <a href="">GeoLocation</a>
+        <a href="">About Us</a>
+    </nav>
+    <hr>
+    <h2>About Forms</h2>
+    <hr>
+    <p>
+        Forms allow User inputs inside UR web pages. Forms work with server side Applications to store, process and
+        render the data from the server.
+        We can use server side technologies like ASP, JSP, ASP.NET, PHP, EXPRESS.JS to process the data sent to it and
+        handle the persistance part of it.
+    </p>
+    <p>
+        Forms send its data to the server in 2 ways: GET and POST. Get sends the information thru' URL as QUERYSTRINGS.
+        It is not safe as it is viewable by any users. <br />
+        POST is the most secure way of sending Information from the Web page to the server as data is sent thru' body.
+        Information to the server is posted as HTTP-REQUEST and obtain a HTTP-RESPONSE to that request. <br>
+        Forms use Input tags for taking inputs from the user. there are other tags like select, radio to display drop
+        down lists and radio buttons.
+    </p>
+    <p>
+    <h2>Points to remember</h2>
+    <hr>
+    <ul style="list-style-type: square;">
+        <li>Form tag is used to create the Form and end it with End tag.</li>
+        <li>action attribute is used in Server side programming to define the page or the file that processes these
+            inputs</li>
+        <li>input tags can be processed using Client side programming using JS</li>
+        <li>Every input element can be identified by id attribute which is used to refer it programmatically</li>
+        <li>We use DOM to manipulate the content of the HTML using JS</li>
+        <li>DOM is the virtual Tree View structure of the HTML document.</li>
+        <li>JS is used to process the DOM tree in the browser.</li>
+    </ul>
+    </p>
+    <section style="border: 2px solid red; padding:10px;text-align: center;">
+        <h2>A HTML Form</h2>
+        <form>
+            <p>
+                <label for="txtName">Name:</label>
+                <input id="txtName" placeholder="Enter the name please!" />
+            </p>
+            <p>
+                <label for="txtEmail">Name:</label>
+                <input id="txtEmail" type="email" placeholder="Enter the email please!" />
+            </p>
+            <p>
+                <label for="txtDob">Date of Birth:</label>
+                <input id="txtDob" type="date" placeholder="Enter the Date of Birth please!" />
+            </p>
+            <p>
+                <label for="txtSalary">Salary:</label>
+                <input id="txtSalary" min="20000" max="100000" placeholder="Enter the Salary please!" />
+            </p>
+            <p>
+                <label for="txtMobile">Mobile:</label>
+                <input type="tel" id="txtMobile" maxlength="10" placeholder="Enter the Mobile no!" />
+            </p>
+            <p>
+                <input type="button" onclick="callSubmit()" value="Submit">
+                <input type="reset" value="Clear">
+            </p>
+            </p>
+        </form>
+    </section>
+</body>
+
+</html>
