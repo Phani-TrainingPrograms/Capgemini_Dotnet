@@ -86,7 +86,14 @@ try{
 }
 
 ```
-
+7. Use the throw keyword to raise any exceptions specific to your appliction logic. This allows the Application flow to stop if an unintended execution is in progress.
+```
+try{
+  throw new Error("OOPS! Something went wrong");
+}catch(err){
+  console.error(err.message);
+}
+```
 
 
 
