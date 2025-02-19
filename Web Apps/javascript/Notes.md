@@ -32,7 +32,35 @@
 3. for..of loop works like foreach of C# where we can use it to iterate thru' arrays, strings and other collections.
 4. Array.forEach is used to work like foreach with a callback function that shall be called on all the elements of the collection.
 5. while and do...while work similarly like in other programming languages.
+```
+    <script>
+        const array = [10, 20,30, 40, 50, 60, 70, 80, 90, 100];
+        function forLoopExample(){
+            for (let index = 0; index < array.length; index++) {
+                console.log(array[index]);
+            }
+        }
 
+        function forInLoop(){
+            for (const key in array) {
+                    const element = array[key];//In this case, key is index
+                    console.log(element)
+            }
+        }
+
+        function forOfExample() {
+                for (const item of array) {
+                    console.log(item)//similar to foreach of C#.
+                }
+        }
+
+        function foreachOfArray(){
+            array.forEach((element, index) => {
+                console.log(`${element} at index ${index}`);
+            });
+        }
+    </script>
+```
 ### Arrays in JS
 1. Arrays in JS work like collections of other programming languages. 
 2. All arrays are objects, they can be initialized with [] operator.
