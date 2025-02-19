@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./Ex04Classes.js"></script>
+</head>
+<body>
+    <script>
+        function singletonExample(){
+            const obj = { Name : "Phaniraj", Address : "Bangalore", Salary : 45000};
+
+            obj.EmailAddress = "phanirajbn@gmail.com"
+            console.log(obj) //Use console.log to log the info in the Console section of the Browser.
+            
+            const copy = obj;
+            copy.EmailAddress = "test@gmail.com";
+
+            console.log(obj)
+        }
+    
+
+        function functionBasedExample(){
+            const empobj = new employee(123, "Phaniraj", "Bangalore")
+
+            const empObj2 = new employee(124, "Vinod", "Shimoga")
+            empObj2.EmpAddress = "Mangalore"
+
+            console.log(empobj);
+            console.log(empObj2);
+
+        }
+
+        function NewClassSyntaxExample(){
+            const cst = new Customer(123, "TestName", 4000);
+            console.log(`The name ${cst.cstName} has payed a bill amount of Rs. ${cst.cstBill}`);
+        }
+        NewClassSyntaxExample();
+    </script>
+</body>
+</html>

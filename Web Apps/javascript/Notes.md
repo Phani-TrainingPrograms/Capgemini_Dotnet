@@ -41,14 +41,14 @@
  1. There are 3 ways to create objects in Js
  2. Singleton objects where U dont need any class declaration.
  ```
-<script>
  const obj = { Name : "Phaniraj", Address : "Bangalore", Salary : 45000};
 
- obj.EmailAddress = "phanirajbn@gmail.com"
- console.log(obj) //Use console.log to log the info in the Console section of the Browser.
-</script>
+ obj.EmailAddress = "phanirajbn@gmail.com
+ console.log(obj) //Use console.log to log the info in the Console section of the Browser. 
  ```
- 3. Function based classes which was the part of old JS. 
+ 3. Function based classes which was the part of old JS.
+ ```
+ ``` 
  4. New ES6 feature of using class keyword to create classes. 
 
 
