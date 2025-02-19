@@ -8,13 +8,47 @@
 <body>
     <h2>Arrays or collections example</h2>
     <div>
-        <button>Add Item</button>
-        <button>Display all items</button>
-        <button>Remove Item</button>
+        <button onclick="onAddItem()">Add Item</button>
+        <button onclick="onDisplay()">Display all items</button>
+        <button onclick="onRemoveItem()">Remove Item</button>
         <!--
             Remove should prompt the user on which element he wants to remove and then remove the item. 
             Click on the display all and find that the element is removed. 
         -->
+        <section>
+            <ul id="list"></ul>
+        </section>    
     </div>
+    <script>
+        const items = [];
+        function onAddItem(){
+             //ask the user for an item
+             const item = prompt("Enter the Item to add");
+             //take the value and add it to the array
+             items.push(item);
+             alert("Item added successfully");   
+        }
+
+        function onRemoveItem(){
+            //ask the user for an item
+            const item = prompt("Enter the Item to remove");
+            var index = items.indexOf(item)
+            if(index < 0)
+                alert("No item found to remove");
+            else{
+                items.splice(index, 1);
+                alert("Item removed from the List");
+            }
+            //take the value and remove it from the array Splice
+        }
+
+        function onDisplay(){
+            const ul = document.querySelector("ul");
+            ul.innerHTML = "";
+            items.forEach(val =>{
+                ul.innerHTML += `<li>${val}</li>`
+            })
+        }
+    </script>
 </body>
 </html>

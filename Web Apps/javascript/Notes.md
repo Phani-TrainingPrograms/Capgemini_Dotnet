@@ -37,4 +37,18 @@
     - slice is used to get the subset of the array.
     - pop is used to remove the last element of the array, for the first element use shift, else use splice. 
 
+ ### Classes and objects in JS
+ 1. There are 3 ways to create objects in Js
+ 2. Singleton objects where U dont need any class declaration.
+ ```
+ const obj = { Name : "Phaniraj", Address : "Bangalore", Salary : 45000};
+
+ obj.EmailAddress = "phanirajbn@gmail.com
+ console.log(obj) //Use console.log to log the info in the Console section of the Browser. 
+ ```
+ 3. Function based classes which was the part of old JS. 
+ 4. New ES6 feature of using class keyword to create classes. 
+
+
+
 
