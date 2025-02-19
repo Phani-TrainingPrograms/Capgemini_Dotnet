@@ -48,8 +48,45 @@
  ```
  3. Function based classes which was the part of old JS.
  ```
+ const employee = function (id, name, address){
+    this.empId = id;
+    this.empName = name;
+    this.empAddress = address;
+}
  ``` 
  4. New ES6 feature of using class keyword to create classes. 
+ ```
+ //Introduced in ES6
+class Customer{
+    constructor(id, name, bill) {
+        this.cstId = id;
+        this.cstName = name;
+        this.cstBill = bill 
+    }
+}
+ ```
+5. Classes can be extending using extends keyword. This is the inheritance feature of Javascript. With this,  U can also achieve polymorphism. 
+6. JS also has Prototype inheritance where we can inherit at multiple levels. 
+
+### Exception handling in JS
+1. Exception Handling is done using try...catch...finally blocks. 
+2. try block is used to wrap the code that might throw an Exception. If an error occurs, the program jumps to the catch block. 
+3. catch block executes only when an error occurs. We can capture the error object and display the error message. 
+4. finally block is an optional block that shall execute on all conditions. 
+5. try blocks can be nested. 
+6. Use the error object and its message property to capture the reason of the error. 
+```
+try{
+    let result = funcThatThrowsException();
+    console.log(result);
+}catch(error){
+    console.error(`An Error occured, the info is ${error.message}`)
+}finally{
+    console.log("Clean up tasks done here")
+}
+
+```
+
 
 
 

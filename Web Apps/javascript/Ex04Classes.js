@@ -11,3 +11,15 @@ class Customer{
         this.cstBill = bill 
     }
 }
+
+//Inheritance in 
+class PrevilagedCustomer extends Customer{
+   constructor(id, name, bill, date){
+    super(id, name, bill)
+    this.visitdate = date;
+   }
+
+   display(){
+    return `${this.cstName} has billed ${this.cstBill} on ${this.visitdate}`
+   }
+}

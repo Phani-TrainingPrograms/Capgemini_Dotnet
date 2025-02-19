@@ -36,7 +36,12 @@
             const cst = new Customer(123, "TestName", 4000);
             console.log(`The name ${cst.cstName} has payed a bill amount of Rs. ${cst.cstBill}`);
         }
-        NewClassSyntaxExample();
+        
+        function InheritanceDemo(){
+            const prevCustomer = new PrevilagedCustomer(123, "Phaniraj", 4000, new Date());
+            console.log(prevCustomer.display());
+        }
+        InheritanceDemo();
     </script>
 </body>
 </html>
