@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "outDir": "./Output",
+        "target": "ES2022"
+    },
+    "include": [
+        "./*.ts"
+    ], 
+    "exclude": [
+        "./*.js"
+    ]
+}
