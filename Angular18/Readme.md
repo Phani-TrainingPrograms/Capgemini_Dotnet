@@ -26,5 +26,11 @@ npm install -g @angular/cli
 ng version
 npm uninstall -g @angular/cli
 ```
-
+2. Using the CLI, we can create Angular Apps from the terminal. Use small case for all the components and the other units that U build in this Project. 
+```
+ng new appname -->Builds app as per the Angular 18 for smaller applications.
+ng new appname --no-standalone --> For Module based Applications and large size apps. The CLI shall create a folder by the name of the app with all the boiler plate code requried for a min Angular Application generated in it.  
+cd appname
+ng serve --open
+```
 
