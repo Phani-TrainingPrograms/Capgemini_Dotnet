@@ -1,0 +1,16 @@
+<div>
+    <h2>Calc Program!</h2>
+    <hr>
+    <input [(ngModel)]="firstVal" type="number" style="margin: 3px;" placeholder="First Value"/>
+    <select style="margin: 3px;" [(ngModel)]="operation">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+    </select>
+    <!-- <input (keyup)="onUpdate($event)" [value]= secondVal style="margin: 3px;" placeholder="Second Value"/> -->
+    <input [(ngModel)]="secondVal"  type="number" style="margin: 3px;" placeholder="Second Value"/>
+
+    <button  (click)="onClick()">=</button>
+    <span>{{result}}</span>
+</div>
