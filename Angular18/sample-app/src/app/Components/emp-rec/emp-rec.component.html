@@ -1,1 +1,16 @@
-<p>emp-rec works!</p>
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="empDetail.empImg" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">
+            EmpName: 
+            <input class="form-control" [(ngModel)]="empDetail.empName">
+        </h5>
+        <p class="card-text">Employee ID:{{empDetail.empId}}</p>
+        <p class="card-text">Address: <input class="form-control" [(ngModel)]="empDetail.empAddress"></p>
+        <p class="card-text">Salary: <input class="form-control" [(ngModel)]="empDetail.empSalary"></p>
+        <p>
+            <a href="#" class="btn btn-primary m-2">Update</a>
+            <a href="#" class="btn btn-danger m-2">Cancel</a>
+        </p>
+    </div>
+</div>

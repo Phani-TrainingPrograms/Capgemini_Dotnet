@@ -1,28 +1,48 @@
 <div>
-    <h1>Lis of Employees</h1>
-    <table class="table table-bordered table-striped">
-        <thead>
-            <tr>
-                <th>Employee ID</th>
-                <th>Employee Name</th>
-                <th>Employee Address</th>
-                <th>Image</th>
-                <th>Options</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let rec of empList">
-                <td>{{rec.empId}}</td>
-                <td>{{rec.empName}}</td>
-                <td>{{rec.empAddress}}</td>
-                <td>
-                    <img [src]="rec.empImg"/>
-                </td>
-                <td>
-                    <a class="btn btn-success m-2" href="#">Edit</a>
-                    <a href="#" class="btn btn-primary m-2">Delete</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <h1>List of Employees</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Employee Name</th>
+                            <th>Employee Address</th>
+                            <th>Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let rec of empList">
+                            <td>{{rec.empId}}</td>
+                            <td>{{rec.empName}}</td>
+                            <td>{{rec.empAddress}}</td>
+                            <td>
+                                <a class="btn btn-success m-2" href="#" (click)="onEdit(rec)">
+                                    <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                                    Edit
+
+                                </a>
+                                <a href="#" class="btn btn-danger m-2">
+                                    Delete
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-5" *ngIf="selectedEmp">
+                <app-emp-rec [empDetail]="selectedEmp"></app-emp-rec>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="container">
+        <div *ngFor="let emp of empList">
+            <app-emp-rec [empDetail]="emp" ></app-emp-rec>
+        </div>
+    </div> -->
+    
 </div>

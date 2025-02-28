@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Employee } from '../../Models/employee';
 
 @Component({
   selector: 'app-emp-rec',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
   styles: ``
 })
 export class EmpRecComponent {
+  @Input() empDetail : Employee = {} as Employee;//Initialize it to a empty Employee object. 
+  
 
 }
